@@ -1,7 +1,9 @@
 module.exports = {
   entry: './app.js',
   output: {
-    filename: './build/bundle.js'
+    path: './build',
+    publicPath: 'www.test.com/',
+    filename: 'bundle.js'
   },
   externals: {
     "angular": "angular"

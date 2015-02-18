@@ -1,5 +1,5 @@
 var angular = require('angular');
-var logo = require('./angular.jpg');
+var logo = require('./images/angular.jpg');
 require('./style.scss');
 
 angular.module('app', [])
