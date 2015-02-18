@@ -1,6 +1,6 @@
 var angular = require('angular');
-var logo = require('./images/angular.jpg');
-require('./style.scss');
+var logo = require('../images/angular.jpg');
+require('../styles/base.scss');
 
 angular.module('app', [])
   .controller('simpleCtrl', function($scope) {

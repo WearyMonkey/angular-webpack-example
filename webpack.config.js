@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './app.js',
+  entry: './app/app.js',
   output: {
     path: './build',
     publicPath: 'www.test.com/',
