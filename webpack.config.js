@@ -1,7 +1,6 @@
-var path = require('path');
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-console.log(__dirname);
+
 module.exports = {
   entry: './app/app.js',
   output: {
@@ -20,8 +19,7 @@ module.exports = {
       {
         test: /\.html$/,
         exclude: "index.html",
-        loader: "ngtemplate?module=myTemplates&relativeTo=^" +
-            (path.resolve(__dirname, '/app/')) + "!html"
+        loader: "ngtemplate?relativeTo=src/&prefix=app/templates/!html"
       }
     ]
   },

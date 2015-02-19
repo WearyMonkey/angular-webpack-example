@@ -1,6 +1,6 @@
 exports.module = angular.module("app").directive("simpleDirective", function(){
   return {
     restrict: "E",
-    templateUrl: "./templates/template.html"
-  }
+    templateUrl: "app/templates/template.html"
+  };
 });
