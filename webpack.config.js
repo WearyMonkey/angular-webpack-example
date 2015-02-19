@@ -23,7 +23,6 @@ module.exports = {
         loader: "ngtemplate?module=myTemplates&relativeTo=^" +
             (path.resolve(__dirname, '/app/')) + "!html"
       }
-
     ]
   },
   plugins: [
