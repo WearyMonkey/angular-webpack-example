@@ -1,5 +1,9 @@
+var path = require('path');
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+//console('dir', path.resolve(__dirname, './app/templates/'));
+console.log('dir');
 
 module.exports = {
   entry: './app/app.js',
@@ -11,6 +15,9 @@ module.exports = {
   externals: {
     "angular": "angular"
   },
+  // resolve: {
+  //   extensions: ['.html']
+  // },
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
@@ -19,7 +26,8 @@ module.exports = {
       {
         test: /\.html$/,
         exclude: "index.html",
-        loader: "ngtemplate?relativeTo=src/&prefix=app/templates/!html"
+        loader: "ngtemplate?module=myTemplates&relativeTo=^" +
+            (path.resolve(__dirname, 'app/templates/')) + "!html"
       }
     ]
   },
