@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "start": "webpack -d --progress --colors --watch | webpack-dev-server --progress --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -r build/*"
   },
   "license": "MIT",
   "devDependencies": {
@@ -24,6 +25,7 @@
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.3"
+    "bootstrap-sass": "^3.3.3",
+    "ng-cache-loader": "0.0.8"
   }
 }
