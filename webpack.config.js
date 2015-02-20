@@ -25,7 +25,7 @@ module.exports = {
       { test: /\.(jpe?g|png|gif|svg)$/i, loaders: ['image?bypassOnDebug&optimizationLevel=7&interlaced=false']},
       {
         test: /\.html$/,
-        loader: "ng-cache?prefix=[dir]"
+        loader: "ngtemplate?module=app&relativeTo=" + (path.resolve(__dirname, './app')) + "/!html"
       }
     ]
   },
